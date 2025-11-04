@@ -53,7 +53,9 @@ function addMessage(text, sender) {
 // Respostas automáticas baseadas em palavras-chave
 function getBotResponse(userMessage) {
     const lowerMessage = userMessage.toLowerCase();
-    if (lowerMessage.includes('consultoria')) {
+    if (lowerMessage.includes('olá','ola') || lowerMessage.includes('oi','ei','oii',)) {
+        return 'Olá! Como posso ajudar você hoje? Pergunte sobre nossos serviços: consultoria, gestão financeira, marketing ou tecnologia.';
+    } else if (lowerMessage.includes('consultoria')) {
         return 'Nossa consultoria empresarial ajuda a otimizar processos e maximizar eficiência. Quer saber mais?';
     } else if (lowerMessage.includes('gestão financeira') || lowerMessage.includes('financeira')) {
         return 'Oferecemos análises profundas e planos financeiros para estabilidade e crescimento. Como podemos ajudar?';
@@ -63,6 +65,10 @@ function getBotResponse(userMessage) {
         return 'Implementamos soluções tecnológicas de ponta para automatização. Vamos conversar!';
     } else if (lowerMessage.includes('contato') || lowerMessage.includes('fale')) {
         return 'Use o formulário de contato no site ou ligue para (11) 99999-9999.';
+    } else if (lowerMessage.includes('horas') || lowerMessage.includes('atendimento')) {
+        return 'Nosso horário de atendimento é de segunda a sexta, das 9h às 18h.';
+    } else if (lowerMessage.includes('preço') || lowerMessage.includes('custo')) {
+        return 'Nossos preços variam conforme o serviço. Entre em contato para um orçamento personalizado.';
     } else {
         return 'Desculpe, não entendi. Pergunte sobre consultoria, gestão financeira, marketing ou tecnologia!';
     }
@@ -87,3 +93,11 @@ chatbotInput.addEventListener('keypress', (e) => {
         sendMessage();
     }
 });
+
+function sendQuickMessage(keyword) {
+  addMessage(keyword, 'user');
+  setTimeout(() => {
+      const botResponse = getBotResponse(keyword);
+      addMessage(botResponse, 'bot');
+  }, 800);
+}
