@@ -18,12 +18,11 @@ body {
 }
 
 header {
-    position: fixed;
+    position:absolute;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background:linear-gradient(to top, #00000000, #000);
     z-index: 1000;
-    transition: background-color 0.3s ease;
 }
 
 header .container {
@@ -34,7 +33,7 @@ header .container {
 }
 
 .logo img {
-    height: 90px;
+    height: 10vh;
 }
 
 nav ul {
@@ -101,6 +100,9 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+
+
+
 .btn-primary {
     background-color: #D4AF37;
     color: #000;
@@ -126,7 +128,7 @@ nav ul li a:hover {
     gap: 50px;
 }
 
-.about .text h2, .services h2, .portfolio h2, .contact h2 {
+.about .text h2, .services h2, .pilares h2, .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     color: #ffffff;
@@ -136,6 +138,9 @@ nav ul li a:hover {
     width: 100%;
     border-radius: 10px;
 }
+
+
+
 
 .services {
     background-color: #121212;
@@ -153,7 +158,6 @@ nav ul li a:hover {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
 .service-card:hover {
@@ -165,6 +169,31 @@ nav ul li a:hover {
     color: #D4AF37;
     margin-bottom: 20px;
 }
+
+.pilares {
+    background: url('/src/images/fundo1.png') no-repeat center center/cover;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.pilares-item {
+    background-color: #000000d7;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pilares-item:hover {
+    transform: scale(1.05);
+}
+
 
 .portfolio {
     background-color: #121212;
@@ -211,6 +240,9 @@ nav ul li a:hover {
     opacity: 1;
 }
 
+
+
+
 .contact {
     background-color: #121212;
 }
@@ -244,6 +276,10 @@ nav ul li a:hover {
 .map {
     flex: 1;
 }
+
+
+
+
 
 footer {
     background-color: #000;

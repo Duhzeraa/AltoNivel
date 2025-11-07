@@ -53,10 +53,12 @@ function addMessage(text, sender) {
 // Respostas automáticas baseadas em palavras-chave
 function getBotResponse(userMessage) {
     const lowerMessage = userMessage.toLowerCase();
-    if (lowerMessage.includes('olá','ola') || lowerMessage.includes('oi','ei','oii',)) {
+    if (lowerMessage.includes('olá','ola','oi','bom dia','boa tarde','boa noite','oii','ooi','Ola','Oi')) {
         return 'Olá! Como posso ajudar você hoje? Pergunte sobre nossos serviços: consultoria, gestão financeira, marketing ou tecnologia.';
     } else if (lowerMessage.includes('consultoria')) {
         return 'Nossa consultoria empresarial ajuda a otimizar processos e maximizar eficiência. Quer saber mais?';
+        
+        
     } else if (lowerMessage.includes('gestão financeira') || lowerMessage.includes('financeira')) {
         return 'Oferecemos análises profundas e planos financeiros para estabilidade e crescimento. Como podemos ajudar?';
     } else if (lowerMessage.includes('marketing')) {
