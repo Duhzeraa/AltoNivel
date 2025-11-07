@@ -93,6 +93,7 @@ nav ul li a:hover {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
+    text-shadow: #000 2px 2px 4px;
 }
 
 .hero p {
@@ -108,7 +109,7 @@ nav ul li a:hover {
     color: #000;
     padding: 15px 30px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 600;       ;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -159,16 +160,16 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
 .service-card:hover {
-    transform: translateY(-10px);
+    transition: transform 0.3s ease;
 }
-
 .service-card i {
     font-size: 3rem;
     color: #D4AF37;
     margin-bottom: 20px;
 }
+
+
 
 .pilares {
     background: url('/src/images/fundo1.png') no-repeat center center/cover;
@@ -183,12 +184,18 @@ nav ul li a:hover {
 }
 
 .pilares-item {
-    background-color: #000000d7;
-    padding: 30px;
+    background-color: #000000;
+    padding: 20px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
+
+.pilares-item h4{
+    color: #D4AF37;
+}
+
 
 .pilares-item:hover {
     transform: scale(1.05);
