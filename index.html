@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alto Nível | Soluções Empresariais</title>
-    <link rel="icon" href="src/images/logo1.png" type="image/x-icon">
+    <link rel="icon" href="src/images/AltoNivel.png" type="image/x-icon">
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/mobile.css" media="(max-width: 768px)">
 
@@ -20,17 +20,16 @@
                 <ul>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#pilares">Pilares Estratégicos</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="">Quem Somos?</a></li>
                 </ul>
             </nav>
             <div class="logo">
-                <img src="src/images/logo.png" alt="Logo Alto Nível">
+                <img src="src/images/AltoNivel.png" alt="Logo Alto Nível">
             </div>
             <nav class="auth-links">
                 <ul>
                     <li><a href="src/pages/Login/login.html">Login</a></li>
-                    <li><a href="criarConta">Criar conta</a></li>
+                    <li><a href="criarConta" class="btn-outline">Criar conta</a></li>
                 </ul>
             </nav>
         </div>
@@ -96,7 +95,7 @@
         <div class="container">
             <h2>Contato</h2>
             <div class="contact-content">
-                <form class="contact-form">
+                <form id="meu-formulario" class="contact-form">
                     <input type="text" placeholder="Nome" required>
                     <input type="email" placeholder="E-mail" required>
                     <textarea placeholder="Mensagem" required></textarea>
@@ -146,7 +145,11 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="src/scripts/main.js"></script>
+    <script src="src/scripts/chatbot.js"></script>
+    <script src="src/scripts/action.js"></script>
+    <script src="src/styles/forms.js" defer></script>
 </body>
 </html>

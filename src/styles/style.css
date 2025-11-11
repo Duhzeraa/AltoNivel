@@ -15,7 +15,6 @@ body {
     max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
-    justify-content: space-between;
 }
 
 header {
@@ -25,50 +24,79 @@ header {
     z-index: 1000;
 }
 
-header .container{
+header .container {
     display: flex;
     align-items: center;
-    padding: 30px 0;
-    margin: 0;
-    justify-content: space-between;
-
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    text-shadow: none;
 }
 
-.logo{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+header .container nav {
+    flex: 1; 
 }
 
-.logo img{
-    height: 10vh;
+.logo {
+    flex-shrink: 0;
 }
 
-nav.autolinks{
-    position: static;
-    justify-items: right;
-    
+.logo img {
+    height: 5vh;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li{
+nav ul li {
     margin-left: 30px;
 }
 
-
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 16px; 
+    text-shadow: #000 1px 1px 2px;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: #D4AF37;
+}
+
+nav:not(.auth-links) ul {
+    justify-content: flex-start;
+}
+nav:not(.auth-links) ul li:first-child {
+    margin-left: 0;
+}
+
+nav.auth-links ul {
+    justify-content: flex-end;
+}
+
+.btn-outline {
+    border: 2px solid #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 
