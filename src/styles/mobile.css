@@ -1,21 +1,57 @@
-/* Responsividade */
 @media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #000;
-        padding: 20px;
+    /* O header vira flex, com quebra de linha */
+    header .container {
+        flex-wrap: wrap; 
+        justify-content: space-between; /* Logo de um lado, botão do outro */
     }
-    nav ul.active {
-        display: flex;
+
+    /* Logo vai pra ordem 1 (pra ficar na esquerda) */
+    .logo {
+        order: 1;
     }
+
+    /* Botão hambúrguer aparece e vai pra ordem 2 (direita) */
     .menu-toggle {
-        display: block;
+        display: block; /* APARECE no mobile */
+        order: 2;
+
     }
+
+    /* As DUAS NAVS somem por padrão */
+    /* E ocupam 100% da largura (ordem 3, pra baixo) */
+    header .container nav {
+        display: none;
+        flex-basis: 100%; /* Ocupa 100% da largura */
+        order: 3;
+    }
+
+    /* QUANDO O JS ADICIONAR A CLASSE 'ACTIVE'... */
+    header .container nav.active {
+        display: block; /* Elas aparecem! */
+    }
+
+    /* Ajeita as listas dentro das NAVs */
+    nav ul {
+        flex-direction: column; /* Links em coluna */
+        width: 100%;
+        background-color: rgba(31, 30, 30, 0.9); /* Fundo pro menu */
+        padding: 20px 0;
+        margin-top: 10px; /* Espaço do topo */
+        align-items: center; /* Centraliza os links */
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav:not(.auth-links) ul {
+        justify-content: center;
+    }
+    nav.auth-links ul {
+        justify-content: center;
+        margin-top: 0;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }

@@ -15,25 +15,32 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#pilares">Pilares Estratégicos</a></li>
-                    <li><a href="">Quem Somos?</a></li>
-                </ul>
-            </nav>
-            <div class="logo">
-                <img src="src/images/AltoNivel.png" alt="Logo Alto Nível">
-            </div>
-            <nav class="auth-links">
-                <ul>
-                    <li><a href="src/pages/Login/login.html">Login</a></li>
-                    <li><a href="criarConta" class="btn-outline">Criar conta</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#pilares">Pilares Estratégicos</a></li>
+                <li><a href="">Quem Somos?</a></li>
+            </ul>
+        </nav>
+        
+        <div class="logo">
+            <img src="src/images/AltoNivel.png" alt="Logo Alto Nível">
         </div>
-    </header>
+
+        <button class="menu-toggle" id="menu-toggle">
+            &#9776; </button>
+
+        <nav class="auth-links" id="auth-nav">
+            <ul>
+                <li><a href="src/pages/Login/login.html">Login</a></li>
+                <li><a href="criarConta" class="btn-outline">Criar conta</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>
 
     <section id="home" class="hero">
         <div class="hero-content">
@@ -101,9 +108,6 @@
                     <textarea placeholder="Mensagem" required></textarea>
                     <button type="submit" class="btn-primary">Enviar</button>
                 </form>
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3773.6314952883017!2d-48.2717547!3d-18.9476985!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a445255143d419%3A0xcfe16a40d7b4bac9!2sUna%20Uberl%C3%A2ndia%20Kara%C3%ADba!5e0!3m2!1spt-BR!2sbr!4v1762544489259!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
             </div>
         </div>
     </section>

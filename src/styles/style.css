@@ -24,9 +24,24 @@ header {
     z-index: 1000;
 }
 
+/* O botão hambúrguer */
+.menu-toggle {
+    display: none; /* ESCONDIDO no desktop */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    text-shadow: #000 1px 1px 2px;
+    padding: 0;
+    line-height: 1; /* Alinha o ícone */
+}
+
+/* No desktop, o logo volta pro meio */
 header .container {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Garante espaço entre os 3 blocos */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 20px;
@@ -37,8 +52,11 @@ header .container nav {
     flex: 1; 
 }
 
+/* O logo fica no meio */
 .logo {
     flex-shrink: 0;
+    /* Tira a ordem se vc tinha mexido */
+    order: 0; 
 }
 
 .logo img {
@@ -250,54 +268,6 @@ nav.auth-links ul {
 }
 
 
-.portfolio {
-    background-color: #121212;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.portfolio-item img {
-    width: 100%;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover img {
-    transform: scale(1.1);
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.portfolio-item:hover .overlay {
-    opacity: 1;
-}
-
-
-
-
 .contact {
     background-color: #121212;
 }
@@ -305,7 +275,6 @@ nav.auth-links ul {
 .contact-content {
     display: flex;
     gap: 50px;
-    align-items: flex-start;
 }
 
 .contact-form {

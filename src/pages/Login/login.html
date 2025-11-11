@@ -8,31 +8,32 @@
     <style>
         body {
             font-family: 'Montserrat', Arial, sans-serif;
-            background: #1a1a2e; /* Azul escuro */
+            background: radial-gradient(circle, #002952, #000000); /* Gradiente suave */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            color: #333;
+            color: #fff6f6;
         }
         .login-container {
-            background: #ffffff; /* Branco */
+            background: #00000027; /* Branco */
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
             width: 100%;
             max-width: 400px;
             text-align: center;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #888888;
         }
         .logo {
             font-size: 24px;
             font-weight: 600;
-            color: #1a1a2e; /* Azul escuro */
+            color: #ffffff; /* Azul escuro */
             margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            
         }
         .logo span {
             color: #d4af37; /* Dourado */
@@ -46,12 +47,14 @@
             box-sizing: border-box;
             font-size: 16px;
             font-family: 'Montserrat', Arial, sans-serif;
-            background: #f9f9f9;
+            background: #e7e5e500;
             transition: border-color 0.3s ease;
+            color: #fff6f6;
         }
         input[type="email"]:focus, input[type="password"]:focus {
             border-color: #d4af37; /* Dourado no foco */
             outline: none;
+            color: #ddd;
         }
         button {
             width: 100%;
@@ -95,6 +98,7 @@
 </head>
 <body>
     <div class="login-container">
+        <img src="/src/images/AltoNivel.png" alt="Logo Alto Nivel" style="width: 100px; margin-bottom: 20px;">
         <div class="logo">
             Alto Nivel <span>|</span> Consultoria Empresarial
         </div>
