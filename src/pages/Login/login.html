@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Alto Nivel | Consultoria Empresarial</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="/src/images/AltoNivel.png" type="image/x-icon">
+    <link rel="icon" href="../src/images/AltoNivel.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Montserrat', Arial, sans-serif;
-            background: radial-gradient(circle, #002952, #000000); /* Gradiente suave */
+            background: radial-gradient(circle, #002952, #000000);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,7 +18,7 @@
             color: #fff6f6;
         }
         .login-container {
-            background: #00000027; /* Branco */
+            background: #00000027;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -30,14 +30,14 @@
         .logo {
             font-size: 24px;
             font-weight: 600;
-            color: #ffffff; /* Azul escuro */
+            color: #ffffff;
             margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 1px;
             
         }
         .logo span {
-            color: #d4af37; /* Dourado */
+            color: #d4af37;
         }
         input[type="email"], input[type="password"] {
             width: 100%;
@@ -53,14 +53,14 @@
             color: #fff6f6;
         }
         input[type="email"]:focus, input[type="password"]:focus {
-            border-color: #d4af37; /* Dourado no foco */
+            border-color: #d4af37;
             outline: none;
             color: #ddd;
         }
         button {
             width: 100%;
             padding: 15px;
-            background: #1a1a2e; /* Azul escuro */
+            background: #1a1a2e; 
             color: #ffffff;
             border: none;
             border-radius: 8px;
@@ -72,12 +72,12 @@
             transition: background-color 0.3s ease;
         }
         button:hover {
-            background: #d4af37; /* Dourado no hover */
+            background: #d4af37; 
         }
         .forgot-link {
             margin-top: 20px;
             display: block;
-            color: #d4af37; /* Dourado */
+            color: #d4af37;
             text-decoration: none;
             font-size: 14px;
             font-weight: 400;
@@ -85,7 +85,7 @@
         .forgot-link:hover {
             text-decoration: underline;
         }
-        /* Responsividade */
+
         @media (max-width: 480px) {
             .login-container {
                 padding: 30px 20px;
@@ -99,7 +99,7 @@
 </head>
 <body>
     <div class="login-container">
-        <img src="/src/images/logo.png" alt="Logo Alto Nivel" style="width: 150px; margin-bottom: 10px;">
+        <img src="../src/images/logo.png" alt="Logo Alto Nivel" style="width: 150px; margin-bottom: 10px;">
         <form id="loginForm">
             <input type="email" id="email" placeholder="E-mail" required>
             <input type="password" id="password" placeholder="Senha" required>
@@ -113,11 +113,8 @@
             event.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            // Lógica básica: substitua por validação real ou API
             if (email && password) {
                 alert(`Login tentado com: ${email}`);
-                // Exemplo: redirecionar após sucesso
-                // window.location.href = 'dashboard.html';
             } else {
                 alert('Por favor, preencha todos os campos.');
             }
