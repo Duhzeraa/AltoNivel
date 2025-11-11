@@ -1,0 +1,109 @@
+/* ---- O 'RESET' BÁSICO ---- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- DEIXANDO O VISU 'CHAVE' ---- */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #121212; /* Fundão escuro */
+    color: #f0f0f0; /* Letra clara */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto; /* Centraliza o conteúdo */
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5em; /* Título grandão */
+    color: #00c0ff; /* Um azul neon 'tech' */
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* ---- SEÇÃO DE INTRO ---- */
+.intro p {
+    font-size: 1.2em;
+    color: #ccc;
+    max-width: 800px;
+    margin-bottom: 40px; /* Adicionado um pouco mais de espaço */
+}
+
+/* ---- O GRID DOS 'BRABO' ---- */
+.secao-socios {
+    margin-top: 50px;
+}
+
+.socios-grid {
+    display: grid;
+    /* Esse 'grid-template-columns' é o pulo do gato:
+      - Em tela grande: 3 colunas (1fr 1fr 1fr)
+      - Em tela média: 2 colunas
+      - Em tela pequena: 1 coluna (o 'minmax(300px, 1fr)')
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; /* Espaço entre os cards */
+}
+
+.socio-card {
+    background-color: #1e1e1e; /* Cor do card */
+    border: 1px solid #333;
+    border-radius: 8px; /* Canto arredondado */
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito 'massa' quando passa o mouse */
+.socio-card:hover {
+    transform: translateY(-5px); /* Levanta o card */
+    box-shadow: 0 8px 20px rgba(0, 192, 255, 0.2); /* Brilho azul */
+}
+
+/* NOVO: Para alinhar foto e texto lado a lado */
+.socio-info {
+    display: flex;
+    align-items: flex-start; /* Alinha a imagem e o texto no topo */
+    gap: 15px; /* Espaço entre a imagem e o texto */
+}
+
+.socio-foto {
+    width: 80px; /* Largura da foto */
+    height: 80px; /* Altura da foto */
+    border-radius: 50%; /* Deixa a foto redonda, se ela for quadrada */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border: 2px solid #00c0ff; /* Borda azul na foto */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+.socio-card h3 {
+    font-size: 1.4em;
+    color: #00c0ff; /* Título do card no mesmo azul */
+    margin-bottom: 10px; /* Reduzi um pouco */
+}
+
+.socio-card p {
+    font-size: 1em;
+    color: #ddd;
+}
+
+.socio-card strong {
+    color: #fff; /* Destaca a gíria */
+    font-weight: 700;
+}
+
+/* ---- LINHA DE FECHAMENTO ---- */
+.fechamento {
+    text-align: center;
+    font-size: 1.3em;
+    color: #aaa;
+    margin-top: 60px;
+    border-top: 1px solid #444;
+    padding-top: 30px;
+}

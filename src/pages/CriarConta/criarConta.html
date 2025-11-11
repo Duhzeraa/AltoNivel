@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Alto Nivel | Consultoria Empresarial</title>
+    <title>Criar Conta - Alto Nivel | Consultoria Empresarial</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="/src/images/AltoNivel.png" type="image/x-icon">
     <style>
+        /* O CSS É EXATAMENTE O MESMO, SÓ COPIADO */
         body {
             font-family: 'Montserrat', Arial, sans-serif;
             background: radial-gradient(circle, #002952, #000000); /* Gradiente suave */
@@ -39,7 +40,8 @@
         .logo span {
             color: #d4af37; /* Dourado */
         }
-        input[type="email"], input[type="password"] {
+        /* Estilo aplicado aos novos inputs tbm */
+        input[type="email"], input[type="password"], input[type="text"] {
             width: 100%;
             padding: 15px;
             margin: 10px 0;
@@ -52,7 +54,7 @@
             transition: border-color 0.3s ease;
             color: #fff6f6;
         }
-        input[type="email"]:focus, input[type="password"]:focus {
+        input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
             border-color: #d4af37; /* Dourado no foco */
             outline: none;
             color: #ddd;
@@ -100,24 +102,37 @@
 <body>
     <div class="login-container">
         <img src="/src/images/logo.png" alt="Logo Alto Nivel" style="width: 150px; margin-bottom: 10px;">
-        <form id="loginForm">
+        
+        <form id="signupForm">
+            <input type="text" id="name" placeholder="Nome Completo" required>
             <input type="email" id="email" placeholder="E-mail" required>
             <input type="password" id="password" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
+            <input type="password" id="confirmPassword" placeholder="Confirmar Senha" required>
+            <button type="submit">Criar Conta</button>
         </form>
-        <a href="#" class="forgot-link">Esqueci minha senha</a>
+        
+        <a href="/src/pages/Login/login.html" class="forgot-link">Já tem uma conta? Faça login</a>
     </div>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
             event.preventDefault();
+            
+            const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            // Lógica básica: substitua por validação real ou API
-            if (email && password) {
-                alert(`Login tentado com: ${email}`);
-                // Exemplo: redirecionar após sucesso
-                // window.location.href = 'dashboard.html';
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Validação simples
+            if (password !== confirmPassword) {
+                alert('As senhas não batem, Por favor confira!');
+                return; // Para a execução
+            }
+
+            if (name && email && password) {
+                alert(`Conta criada com sucesso para: ${email}`);
+                // Exemplo: redirecionar para o login após criar
+                // window.location.href = 'login.html';
             } else {
                 alert('Por favor, preencha todos os campos.');
             }
