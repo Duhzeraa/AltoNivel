@@ -158,11 +158,13 @@ nav.auth-links ul {
     font-weight: 700;
     margin-bottom: 20px;
     text-shadow: #000 2px 2px 4px;
+    text-transform: uppercase;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    text-shadow: #000 2px 2px 4px;
 }
 
 
